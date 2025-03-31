@@ -157,7 +157,7 @@ export default function Home() {
             />
             <ProductCard
               image="/produto-6.png"
-              title="Saia Brean"
+              title="Saia Brean plus size"
               price={149.9}
               sizes={["46", "48"]}
             />
@@ -237,8 +237,7 @@ export default function Home() {
               <h2 className="text-3xl font-bold mb-6">Sobre a Jeans_926</h2>
               <div className="space-y-4">
                 <p>
-                  Somos uma loja virtual especializada em moda feminina e masculina com foco em jeans e peças casuais de alta
-                  qualidade.
+                  Somos uma loja especializada em moda feminina e masculina com foco em jeans e peças casuais de alta qualidade.
                 </p>
                 <p>
                   Nossa missão é oferecer roupas que combinam estilo, conforto e durabilidade, atendendo homens e mulheres de
@@ -357,7 +356,7 @@ export default function Home() {
                 <span className="text-lg font-bold">Jeans_926</span>
               </div>
               <p className="text-muted-foreground mb-4">
-                Loja virtual de roupas femininas com variedade de peças e tamanhos.
+                Loja de roupas femininas e masculinas com variedade de peças e tamanhos.
               </p>
               <div className="flex items-center gap-4">
                 <Link href="https://instagram.com/jeans_926" target="_blank" rel="noopener noreferrer">
