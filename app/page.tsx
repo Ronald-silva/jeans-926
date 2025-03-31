@@ -57,13 +57,15 @@ export default function Home() {
         {/* Hero Section */}
         <section className="relative">
           <HeroCarousel />
-          <div className="absolute inset-0 flex items-center justify-center flex-col bg-black/40 text-white p-4">
-            <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-center mb-2 md:mb-4">
-              Moda Feminina com Estilo e Qualidade
-            </h1>
-            <p className="text-base sm:text-lg md:text-xl text-center max-w-2xl mb-4 md:mb-8">
-              Jeans, shorts, saias e blusas para todos os estilos e ocasiões
-            </p>
+          <div className="absolute inset-0 flex items-start justify-center flex-col bg-gradient-to-b from-black/60 via-black/30 to-transparent text-white p-4 pt-16 md:pt-0 md:items-center md:justify-center">
+            <div className="max-w-2xl mx-auto text-center">
+              <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-2 md:mb-4">
+                Moda com Estilo e Qualidade
+              </h1>
+              <p className="text-base sm:text-lg md:text-xl mb-4 md:mb-8">
+                Jeans, shorts, saias e blusas para todos os estilos e ocasiões
+              </p>
+            </div>
           </div>
         </section>
 
@@ -230,16 +232,16 @@ export default function Home() {
 
         {/* About */}
         <section id="sobre" className="py-16 container">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div className="text-center md:text-left">
               <h2 className="text-3xl font-bold mb-6">Sobre a Jeans_926</h2>
               <div className="space-y-4">
                 <p>
-                  Somos uma loja virtual especializada em moda feminina com foco em jeans e peças casuais de alta
+                  Somos uma loja virtual especializada em moda feminina e masculina com foco em jeans e peças casuais de alta
                   qualidade.
                 </p>
                 <p>
-                  Nossa missão é oferecer roupas que combinam estilo, conforto e durabilidade, atendendo mulheres de
+                  Nossa missão é oferecer roupas que combinam estilo, conforto e durabilidade, atendendo homens e mulheres de
                   diversos tamanhos e estilos.
                 </p>
                 <p>
@@ -247,7 +249,7 @@ export default function Home() {
                   catálogo com as últimas tendências da moda.
                 </p>
               </div>
-              <div className="mt-8 flex gap-4">
+              <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                 <Button variant="outline">Conheça Nossa História</Button>
                 <Link href="https://instagram.com/jeans_926" target="_blank" rel="noopener noreferrer">
                   <Button>
@@ -256,7 +258,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="relative aspect-square rounded-lg overflow-hidden">
+            <div className="relative w-full max-w-md mx-auto aspect-square rounded-lg overflow-hidden">
               <Image 
                 src="/about.png" 
                 alt="Sobre Jeans 926" 
