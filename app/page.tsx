@@ -76,7 +76,7 @@ export default function Home() {
               <Card className="bg-background border-none shadow-sm">
                 <CardContent className="flex flex-col items-center text-center p-6">
                   <ShoppingBag className="h-12 w-12 text-pink-500 mb-4" />
-                  <h3 className="text-xl font-medium mb-2">Loja Virtual e física</h3>
+                  <h3 className="text-xl font-medium mb-2">Loja Física e Virtual</h3>
                   <p className="text-muted-foreground">Compre pelo Instagram ou WhatsApp com facilidade e segurança</p>
                 </CardContent>
               </Card>
@@ -270,51 +270,92 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Testimonials */}
+        {/* Diferenciais */}
         <section className="py-16 bg-muted/30">
           <div className="container">
             <div className="flex flex-col items-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">O Que Nossas Clientes Dizem</h2>
+              <h2 className="text-3xl font-bold mb-4">Por que escolher a Jeans_926?</h2>
               <p className="text-muted-foreground text-center max-w-2xl">
-                Veja a experiência de quem já comprou conosco
+                Conheça os diferenciais que fazem nossa loja especial
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[1, 2, 3].map((i) => (
-                <Card key={i} className="bg-background border-none shadow-sm">
-                  <CardContent className="p-6">
-                    <div className="flex items-center gap-2 mb-4">
-                      {[1, 2, 3, 4, 5].map((star) => (
-                        <svg
-                          key={star}
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="currentColor"
-                          className="text-yellow-500"
-                        >
-                          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                        </svg>
-                      ))}
-                    </div>
-                    <p className="italic mb-6">
-                      "Amei minha calça jeans! O tecido é de ótima qualidade, o caimento é perfeito e o atendimento foi
-                      excelente. Já estou de olho em outras peças!"
-                    </p>
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center">
-                        <span className="font-medium text-sm">MC</span>
-                      </div>
-                      <div>
-                        <p className="font-medium">Maria C.</p>
-                        <p className="text-sm text-muted-foreground">Cliente desde 2023</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
+              <Card className="bg-background border-none shadow-sm">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-2 mb-4">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="text-pink-500"
+                    >
+                      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-medium mb-2">Qualidade Garantida</h3>
+                  <p className="text-muted-foreground">
+                    Trabalhamos com as melhores marcas e tecidos, garantindo durabilidade e conforto em todas as peças.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-background border-none shadow-sm">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-2 mb-4">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="text-pink-500"
+                    >
+                      <path d="M12 2v20M2 12h20" />
+                      <circle cx="12" cy="12" r="10" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-medium mb-2">Variedade de Tamanhos</h3>
+                  <p className="text-muted-foreground">
+                    Oferecemos peças do 36 ao 48, garantindo que voce encontre seu  tamanho ideal.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-background border-none shadow-sm">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-2 mb-4">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="text-pink-500"
+                    >
+                      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-medium mb-2">Atendimento Personalizado</h3>
+                  <p className="text-muted-foreground">
+                    Nossa equipe está sempre pronta para ajudar com dicas de tamanho, estilo e tendências.
+                  </p>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
@@ -356,7 +397,7 @@ export default function Home() {
                 <span className="text-lg font-bold">Jeans_926</span>
               </div>
               <p className="text-muted-foreground mb-4">
-                Loja de roupas femininas e masculinas com variedade de peças e tamanhos.
+                Loja de roupas femininas e masculinas, variedade para todos os estilos e tamanhos.
               </p>
               <div className="flex items-center gap-4">
                 <Link href="https://instagram.com/jeans_926" target="_blank" rel="noopener noreferrer">
@@ -390,7 +431,8 @@ export default function Home() {
               <div className="space-y-2 text-muted-foreground">
                 <p>Horário de atendimento: Seg-Sex 9h às 18h</p>
                 <p>Entrega para toda a região</p>
-                <p>Pagamento via Pix ou transferência bancária</p>
+                <p>Pagamento via Pix, cartão e dinheiro</p>
+                <p ><a href="https://www.google.com/maps/@-3.7767944,-38.5830426,3a,75y,25.57h,90.23t/data=!3m7!1e1!3m5!1sqJXnH_RK7RLYPhgkk4JOog!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-0.22731996752557393%26panoid%3DqJXnH_RK7RLYPhgkk4JOog%26yaw%3D25.571031895606716!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI1MDMyNS4xIKXMDSoJLDEwMjExNjQwSAFQAw%3D%3D">Endereço: Seixas Correa, 926 - Bom Sucesso</a></p>
               </div>
             </div>
           </div>
