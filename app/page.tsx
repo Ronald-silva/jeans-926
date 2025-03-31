@@ -76,7 +76,7 @@ export default function Home() {
               <Card className="bg-background border-none shadow-sm">
                 <CardContent className="flex flex-col items-center text-center p-6">
                   <ShoppingBag className="h-12 w-12 text-pink-500 mb-4" />
-                  <h3 className="text-xl font-medium mb-2">Loja Virtual</h3>
+                  <h3 className="text-xl font-medium mb-2">Loja Virtual e física</h3>
                   <p className="text-muted-foreground">Compre pelo Instagram ou WhatsApp com facilidade e segurança</p>
                 </CardContent>
               </Card>
