@@ -20,7 +20,7 @@ export default function Home() {
         <div className="container flex h-14 md:h-16 items-center justify-between">
           <div className="flex items-center gap-2">
             <MobileNav />
-            <Image src="/logo.svg" alt="Jeans 926 Logo" width={32} height={32} className="rounded-full md:w-10 md:h-10 border border-transparent bg-gradient-to-r from-pink-500 to-purple-600 p-[1px]" />
+           
             <span className="text-lg md:text-xl font-bold">Jeans_926</span>
           </div>
           <nav className="hidden md:flex items-center gap-6">
@@ -124,20 +124,20 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <ProductCard
               image="/produto-1.png"
-              title="Calça Jeans Skinny"
+              title="Saia Jeans azul"
               price={129.9}
               sizes={["36", "38", "40", "42", "44"]}
             />
             <ProductCard
               image="/produto-2.png"
-              title="Calça Jeans Destroyed"
+              title="Saia Jeans Destroyed"
               price={89.9}
               sizes={["36", "38", "40", "42", "44"]}
               featured
             />
             <ProductCard
               image="/produto-3.png"
-              title="Calça Jeans Midi"
+              title="Saia Jeans Midi"
               price={99.9}
               sizes={["36", "38", "40", "42", "44"]}
             />
@@ -149,16 +149,53 @@ export default function Home() {
             />
             <ProductCard
               image="/produto-5.png"
-              title="Calça lage"
+              title="Short jeans lage"
               price={69.9}
               sizes={["P", "M", "G"]}
             />
             <ProductCard
               image="/produto-6.png"
-              title="Calça Jeans"
+              title="Saia Brean"
+              price={149.9}
+              sizes={["46", "48"]}
+            />
+            <ProductCard
+              image="/produto-7.png"
+              title="Bermuda jeans"
               price={149.9}
               sizes={["36", "38", "40", "42", "44"]}
             />
+            <ProductCard
+              image="/produto-8.png"
+              title="Bermuda jeans"
+              price={149.9}
+              sizes={["36", "38", "40", "42", "44"]}
+            />
+            <ProductCard
+              image="/produto-9.png"
+              title="Bermuda jeans"
+              price={149.9}
+              sizes={["36", "38", "40", "42", "44"]}
+            />
+            <ProductCard
+              image="/produto-10.png"
+              title="Bermuda jeans"
+              price={149.9}
+              sizes={["36", "38", "40", "42", "44"]}
+            />
+            <ProductCard
+              image="/produto-11.png"
+              title="Bermuda jeans"
+              price={149.9}
+              sizes={["36", "38", "40", "42", "44"]}
+            />
+            <ProductCard
+              image="/produto-12.png"
+              title="Bermuda jeans"
+              price={149.9}
+              sizes={["36", "38", "40", "42", "44"]}
+            />
+            
           </div>
 
           <div className="flex justify-center mt-12">
@@ -308,7 +345,13 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <Image src="/logo.svg" alt="Jeans 926 Logo" width={32} height={32} className="rounded-full border border-transparent bg-gradient-to-r from-pink-500 to-purple-600 p-[1px]" />
+                <Image 
+                  src="/logo.svg" 
+                  alt="Jeans 926 Logo" 
+                  width={80} 
+                  height={80} 
+                  className="w-14 h-14 md:w-16 md:h-16" 
+                />
                 <span className="text-lg font-bold">Jeans_926</span>
               </div>
               <p className="text-muted-foreground mb-4">
@@ -351,11 +394,10 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t mt-6 md:mt-8 pt-6 md:pt-8 text-center text-xs md:text-sm text-muted-foreground">
-            <p>© 2024 Jeans_926. Todos os direitos reservados.</p>
+            <p> 2024 Jeans_926. Todos os direitos reservados.</p>
           </div>
         </div>
       </footer>
     </div>
   )
 }
-

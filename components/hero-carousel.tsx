@@ -17,7 +17,7 @@ const images = [
   {
     src: "/hero-3.png",
     alt: "Looks Modernos"
-  }
+  },
 ]
 
 function CarouselImage({ src, alt }: { src: string; alt: string }) {

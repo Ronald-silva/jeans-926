@@ -14,7 +14,7 @@ export function WhatsappButton({
   className,
   ...props 
 }: WhatsappButtonProps) {
-  const whatsappNumber = "5511999999999" // Substitua pelo número real
+  const whatsappNumber = "5585921465543" // Substitua pelo número real
   const whatsappUrl = `https://wa.me/${whatsappNumber}`
 
   const baseStyles = {
