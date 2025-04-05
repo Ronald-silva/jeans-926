@@ -127,74 +127,122 @@ export default function Home() {
             <ProductCard
               image="/produto-1.png"
               title="Saia Jeans azul"
-              price={129.9}
+              price={25.00}
               sizes={["36", "38", "40", "42", "44"]}
             />
             <ProductCard
               image="/produto-2.png"
               title="Saia Jeans Destroyed"
-              price={89.9}
+              price={35.00}
               sizes={["36", "38", "40", "42", "44"]}
               featured
             />
             <ProductCard
               image="/produto-3.png"
               title="Saia Jeans Midi"
-              price={99.9}
+              price={25.00}
               sizes={["36", "38", "40", "42", "44"]}
             />
             <ProductCard
               image="/produto-4.png"
-              title="Calça Moly"
-              price={69.9}
-              sizes={["P", "M", "G"]}
+              title="Short jeans Mya"
+              price={35.00}
+              sizes={["36","38","40","42","44"]}
             />
             <ProductCard
               image="/produto-5.png"
               title="Short jeans lage"
-              price={69.9}
-              sizes={["P", "M", "G"]}
+              price={35.00}
+              sizes={["36","38","40","42","44"]}
             />
             <ProductCard
               image="/produto-6.png"
-              title="Saia Brean plus size"
-              price={149.9}
-              sizes={["46", "48"]}
+              title="Cropped jeans"
+              price={59.99}
+              sizes={["36","38","40","42","44"]}
             />
             <ProductCard
               image="/produto-7.png"
-              title="Bermuda jeans"
-              price={149.9}
+              title="Calca jeans moly"
+              price={49.99}
               sizes={["36", "38", "40", "42", "44"]}
             />
             <ProductCard
               image="/produto-8.png"
-              title="Bermuda jeans"
-              price={149.9}
-              sizes={["36", "38", "40", "42", "44"]}
+              title="Saia jeans plus size"
+              price={29.99}
+              sizes={["44", "46", "48","50"]}
             />
             <ProductCard
               image="/produto-9.png"
-              title="Bermuda jeans"
-              price={149.9}
-              sizes={["36", "38", "40", "42", "44"]}
+              title="Calca jeans plus size"
+              price={49.99}
+              sizes={["44", "46", "48","50"]}
             />
             <ProductCard
               image="/produto-10.png"
               title="Bermuda jeans"
-              price={149.9}
+              price={39.99}
               sizes={["36", "38", "40", "42", "44"]}
             />
             <ProductCard
               image="/produto-11.png"
               title="Bermuda jeans"
-              price={149.9}
+              price={39.99}
               sizes={["36", "38", "40", "42", "44"]}
             />
             <ProductCard
               image="/produto-12.png"
               title="Bermuda jeans"
-              price={149.9}
+              price={39.99}
+              sizes={["36", "38", "40", "42", "44"]}
+            />
+            <ProductCard
+              image="/produto-13.png"
+              title="Bermuda jeans"
+              price={39.99}
+              sizes={["36", "38", "40", "42", "44"]}
+            />
+            <ProductCard
+              image="/produto-14.png"
+              title="Bermuda jeans"
+              price={39.99}
+              sizes={["36", "38", "40", "42", "44"]}
+            />
+            <ProductCard
+              image="/produto-15.png"
+              title="Bermuda jeans"
+              price={39.99}
+              sizes={["36", "38", "40", "42", "44"]}
+            />
+            <ProductCard
+              image="/produto-16.png"
+              title="Bermuda jeans"
+              price={39.99}
+              sizes={["36", "38", "40", "42", "44"]}
+            />
+             <ProductCard
+              image="/produto-17.png"
+              title="Bermuda jeans"
+              price={39.99}
+              sizes={["36", "38", "40", "42", "44"]}
+            />
+             <ProductCard
+              image="/produto-18.png"
+              title="Bermuda jeans"
+              price={39.99}
+              sizes={["36", "38", "40", "42", "44"]}
+            />
+             <ProductCard
+              image="/produto-19.png"
+              title="calca jeans"
+              price={59.99}
+              sizes={["36", "38", "40", "42", "44"]}
+            />
+             <ProductCard
+              image="/produto-20.png"
+              title="Calca jeans"
+              price={59.99}
               sizes={["36", "38", "40", "42", "44"]}
             />
             
