@@ -28,11 +28,7 @@ export function ProductCard({ image, title, price, sizes, featured }: ProductCar
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             quality={85}
           />
-          {featured && (
-            <Badge className="absolute top-2 right-2 md:top-4 md:right-4 bg-pink-600 hover:bg-pink-700">
-              Destaque
-            </Badge>
-          )}
+         
         </div>
       </CardHeader>
       <CardContent className="p-3 md:p-4">

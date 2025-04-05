@@ -122,8 +122,9 @@ export default function Home() {
               Conheça nossa coleção de peças exclusivas com qualidade e preço justo
             </p>
           </div>
-
+          <h4 className="text-3xl font-bold mb-4">Moda Feminina</h4>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          
             <ProductCard
               image="/produto-1.png"
               title="Saia Jeans azul"
@@ -179,6 +180,14 @@ export default function Home() {
               price={49.99}
               sizes={["44", "46", "48","50"]}
             />
+            
+            
+          </div>
+
+          <h4 className="text-3xl font-bold mb-4 mt-20">Moda Masculina</h4>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+            
             <ProductCard
               image="/produto-10.png"
               title="Bermuda jeans"
@@ -248,11 +257,7 @@ export default function Home() {
             
           </div>
 
-          <div className="flex justify-center mt-12">
-            <Button size="lg" className="bg-pink-600 hover:bg-pink-700 text-white">
-              Ver Todos os Produtos <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-          </div>
+          
         </section>
 
         {/* Size Guide */}
