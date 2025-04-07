@@ -44,7 +44,7 @@ export default function Home() {
           <div className="flex items-center gap-2 md:gap-4">
             <Link href="https://instagram.com/jeans_926" target="_blank" rel="noopener noreferrer">
               <Button variant="ghost" size="icon" className="h-8 w-8 md:h-10 md:w-10">
-                <Instagram className="h-4 w-4 md:h-5 md:w-5" />
+                <Instagram className="h-4 w-4 md:h-5 md:w-5 text-[#E4405F]" />
                 <span className="sr-only">Instagram</span>
               </Button>
             </Link>
@@ -260,28 +260,7 @@ export default function Home() {
           
         </section>
 
-        {/* Size Guide */}
-        <section id="tamanhos" className="py-16 bg-muted/30">
-          <div className="container">
-            <div className="flex flex-col items-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Guia de Tamanhos</h2>
-              <p className="text-muted-foreground text-center max-w-2xl">
-                Encontre o tamanho perfeito para você com nosso guia de medidas
-              </p>
-            </div>
-
-            <SizeGuide />
-
-            <div className="mt-8 text-center">
-              <p className="text-muted-foreground mb-4">
-                Não tem certeza do seu tamanho? Entre em contato conosco para ajuda personalizada!
-              </p>
-              <WhatsappButton variant="outline">
-                Tirar Dúvidas <MessageCircle className="ml-2 h-4 w-4" />
-              </WhatsappButton>
-            </div>
-          </div>
-        </section>
+       
 
         {/* About */}
         <section id="sobre" className="py-16 container">
@@ -455,7 +434,7 @@ export default function Home() {
               <div className="flex items-center gap-4">
                 <Link href="https://instagram.com/jeans_926" target="_blank" rel="noopener noreferrer">
                   <Button variant="ghost" size="icon" className="h-8 w-8">
-                    <Instagram className="h-4 w-4" />
+                    <Instagram className="h-4 w-4 text-[#E4405F]" />
                     <span className="sr-only">Instagram</span>
                   </Button>
                 </Link>

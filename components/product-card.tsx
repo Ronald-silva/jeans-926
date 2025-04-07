@@ -43,7 +43,7 @@ export function ProductCard({ image, title, price, sizes, featured }: ProductCar
         </div>
       </CardContent>
       <CardFooter className="p-3 md:p-4 pt-0">
-        <Button className="w-full text-sm md:text-base">Ver Detalhes</Button>
+        
       </CardFooter>
     </Card>
   )
