@@ -27,10 +27,7 @@ export default function Home() {
               Produtos
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-pink-500 to-purple-600 transition-all duration-300 group-hover:w-full"></span>
             </Link>
-            <Link href="#tamanhos" className="relative text-sm font-medium transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-pink-500 to-purple-600 group">
-              Tamanhos
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-pink-500 to-purple-600 transition-all duration-300 group-hover:w-full"></span>
-            </Link>
+            
             <Link href="#sobre" className="relative text-sm font-medium transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-pink-500 to-purple-600 group">
               Sobre nós
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-pink-500 to-purple-600 transition-all duration-300 group-hover:w-full"></span>
@@ -280,9 +277,9 @@ export default function Home() {
                 </p>
               </div>
               <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                <Button variant="outline">Conheça Nossa História</Button>
-                <Link href="https://instagram.com/jeans_926" target="_blank" rel="noopener noreferrer">
-                  <Button>
+                <Button variant="outline" className="w-full sm:w-auto">Conheça Nossa História</Button>
+                <Link href="https://instagram.com/jeans_926" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                  <Button className="w-full">
                     <Instagram className="mr-2 h-4 w-4" /> Siga no Instagram
                   </Button>
                 </Link>
