@@ -7,11 +7,18 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ProductCard } from "@/components/product-card"
+import { ProductsSection } from "@/components/products-section"
 import { WhatsappButton } from "@/components/whatsapp-button"
 import { HeroCarousel } from "@/components/hero-carousel"
 import { MobileNav } from "@/components/mobile-nav"
+import { getProductsByCategory } from "@/lib/products-data"
+import { CONTACT_INFO, SITE_INFO } from "@/lib/constants"
+import { SizeIcon, QualityIcon, VarietyIcon, SupportIcon } from "@/components/icons"
 
 export default function Home() {
+  const femaleProducts = getProductsByCategory('feminino')
+  const maleProducts = getProductsByCategory('masculino')
+
   return (
     <div className="flex min-h-screen flex-col">
       {/* Header */}
@@ -20,7 +27,7 @@ export default function Home() {
           <div className="flex items-center gap-2">
             <MobileNav />
            
-            <span className="text-lg md:text-xl font-bold">Jeans_926</span>
+            <span className="text-lg md:text-xl font-bold">{SITE_INFO.name}</span>
           </div>
           <nav className="hidden md:flex items-center gap-6">
             <Link href="#produtos" className="relative text-sm font-medium transition-all duration-300 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r from-pink-500 to-purple-600 group">
@@ -38,7 +45,7 @@ export default function Home() {
             </Link>
           </nav>
           <div className="flex items-center gap-2 md:gap-4">
-            <Link href="https://instagram.com/jeans_926" target="_blank" rel="noopener noreferrer">
+            <Link href={CONTACT_INFO.instagram} target="_blank" rel="noopener noreferrer">
               <Button variant="ghost" size="icon" className="h-8 w-8 md:h-10 md:w-10">
                 <Instagram className="h-4 w-4 md:h-5 md:w-5 text-[#E4405F]" />
                 <span className="sr-only">Instagram</span>
@@ -85,23 +92,7 @@ export default function Home() {
               </Card>
               <Card className="bg-background border-none shadow-sm">
                 <CardContent className="flex flex-col items-center text-center p-6">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="48"
-                    height="48"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="h-12 w-12 text-pink-500 mb-4"
-                  >
-                    <path d="M6 14h8"></path>
-                    <path d="M6 18h8"></path>
-                    <path d="M10 3v10"></path>
-                    <rect width="16" height="16" x="4" y="3" rx="2"></rect>
-                  </svg>
+                  <SizeIcon className="h-12 w-12 text-pink-500 mb-4" />
                   <h3 className="text-xl font-medium mb-2">Diversos Tamanhos</h3>
                   <p className="text-muted-foreground">Variedade de peças nos tamanhos 36 ao 44 para todos os corpos</p>
                 </CardContent>
@@ -111,147 +102,23 @@ export default function Home() {
         </section>
 
         {/* Featured Products */}
-        <section id="produtos" className="py-16 container">
+        <section id="produtos" className="py-16 container" aria-labelledby="produtos-heading">
           <div className="flex flex-col items-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Nossos Produtos</h2>
+            <h2 id="produtos-heading" className="text-3xl font-bold mb-4">Nossos Produtos</h2>
             <p className="text-muted-foreground text-center max-w-2xl">
               Conheça nossa coleção de peças exclusivas com qualidade e preço justo
             </p>
           </div>
-          <h4 className="text-3xl font-bold mb-4">Moda Feminina</h4>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          
-            <ProductCard
-              image="/produto-1.png"
-              title="Saia Jeans azul"
-              price={25.00}
-              sizes={["36", "38", "40", "42", "44"]}
-            />
-            <ProductCard
-              image="/produto-2.png"
-              title="Saia Jeans Destroyed"
-              price={35.00}
-              sizes={["36", "38", "40", "42", "44"]}
-              featured
-            />
-            <ProductCard
-              image="/produto-3.png"
-              title="Saia Jeans Midi"
-              price={25.00}
-              sizes={["36", "38", "40", "42", "44"]}
-            />
-            <ProductCard
-              image="/produto-4.png"
-              title="Short jeans Mya"
-              price={35.00}
-              sizes={["36","38","40","42","44"]}
-            />
-            <ProductCard
-              image="/produto-5.png"
-              title="Short jeans lage"
-              price={35.00}
-              sizes={["36","38","40","42","44"]}
-            />
-            <ProductCard
-              image="/produto-6.png"
-              title="Cropped jeans"
-              price={59.99}
-              sizes={["36","38","40","42","44"]}
-            />
-            <ProductCard
-              image="/produto-7.png"
-              title="Calca jeans moly"
-              price={49.99}
-              sizes={["36", "38", "40", "42", "44"]}
-            />
-            <ProductCard
-              image="/produto-8.png"
-              title="Saia jeans plus size"
-              price={29.99}
-              sizes={["44", "46", "48","50"]}
-            />
-            <ProductCard
-              image="/produto-9.png"
-              title="Calca jeans plus size"
-              price={49.99}
-              sizes={["44", "46", "48","50"]}
-            />
-            
-            
-          </div>
+          <ProductsSection 
+            title="Moda Feminina" 
+            products={femaleProducts} 
+          />
 
-          <h4 className="text-3xl font-bold mb-4 mt-20">Moda Masculina</h4>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          
-            
-            <ProductCard
-              image="/produto-10.png"
-              title="Bermuda jeans"
-              price={39.99}
-              sizes={["36", "38", "40", "42", "44"]}
-            />
-            <ProductCard
-              image="/produto-11.png"
-              title="Bermuda jeans"
-              price={39.99}
-              sizes={["36", "38", "40", "42", "44"]}
-            />
-            <ProductCard
-              image="/produto-12.png"
-              title="Bermuda jeans"
-              price={39.99}
-              sizes={["36", "38", "40", "42", "44"]}
-            />
-            <ProductCard
-              image="/produto-13.png"
-              title="Bermuda jeans"
-              price={39.99}
-              sizes={["36", "38", "40", "42", "44"]}
-            />
-            <ProductCard
-              image="/produto-14.png"
-              title="Bermuda jeans"
-              price={39.99}
-              sizes={["36", "38", "40", "42", "44"]}
-            />
-            <ProductCard
-              image="/produto-15.png"
-              title="Bermuda jeans"
-              price={39.99}
-              sizes={["36", "38", "40", "42", "44"]}
-            />
-            <ProductCard
-              image="/produto-16.png"
-              title="Bermuda jeans"
-              price={39.99}
-              sizes={["36", "38", "40", "42", "44"]}
-            />
-             <ProductCard
-              image="/produto-17.png"
-              title="Bermuda jeans"
-              price={39.99}
-              sizes={["36", "38", "40", "42", "44"]}
-            />
-             <ProductCard
-              image="/produto-18.png"
-              title="Bermuda jeans"
-              price={39.99}
-              sizes={["36", "38", "40", "42", "44"]}
-            />
-             <ProductCard
-              image="/produto-19.png"
-              title="calca jeans"
-              price={59.99}
-              sizes={["36", "38", "40", "42", "44"]}
-            />
-             <ProductCard
-              image="/produto-20.png"
-              title="Calca jeans"
-              price={59.99}
-              sizes={["36", "38", "40", "42", "44"]}
-            />
-            
-          </div>
+          <ProductsSection 
+            title="Moda Masculina" 
+            products={maleProducts} 
+            className="mt-20"
+          />
 
           
         </section>
@@ -259,10 +126,10 @@ export default function Home() {
        
 
         {/* About */}
-        <section id="sobre" className="py-16 container">
+        <section id="sobre" className="py-16 container" aria-labelledby="sobre-heading">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="text-center md:text-left">
-              <h2 className="text-3xl font-bold mb-6">Sobre a Jeans_926</h2>
+              <h2 id="sobre-heading" className="text-3xl font-bold mb-6">Sobre a Jeans_926</h2>
               <div className="space-y-4">
                 <p>
                   Somos uma loja especializada em moda feminina e masculina com foco em jeans e peças casuais de alta qualidade.
@@ -278,7 +145,7 @@ export default function Home() {
               </div>
               <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                 <Button variant="outline" className="w-full sm:w-auto">Conheça Nossa História</Button>
-                <Link href="https://instagram.com/jeans_926" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                <Link href={CONTACT_INFO.instagram} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                   <Button className="w-full">
                     <Instagram className="mr-2 h-4 w-4" /> Siga no Instagram
                   </Button>
@@ -312,20 +179,7 @@ export default function Home() {
               <Card className="bg-background border-none shadow-sm">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-2 mb-4">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="text-pink-500"
-                    >
-                      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-                    </svg>
+                    <QualityIcon className="text-pink-500" />
                   </div>
                   <h3 className="text-xl font-medium mb-2">Qualidade Garantida</h3>
                   <p className="text-muted-foreground">
@@ -337,21 +191,7 @@ export default function Home() {
               <Card className="bg-background border-none shadow-sm">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-2 mb-4">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="text-pink-500"
-                    >
-                      <path d="M12 2v20M2 12h20" />
-                      <circle cx="12" cy="12" r="10" />
-                    </svg>
+                    <VarietyIcon className="text-pink-500" />
                   </div>
                   <h3 className="text-xl font-medium mb-2">Variedade de Tamanhos</h3>
                   <p className="text-muted-foreground">
@@ -363,20 +203,7 @@ export default function Home() {
               <Card className="bg-background border-none shadow-sm">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-2 mb-4">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="text-pink-500"
-                    >
-                      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
-                    </svg>
+                    <SupportIcon className="text-pink-500" />
                   </div>
                   <h3 className="text-xl font-medium mb-2">Atendimento Personalizado</h3>
                   <p className="text-muted-foreground">
@@ -389,15 +216,15 @@ export default function Home() {
         </section>
 
         {/* CTA */}
-        <section id="contato" className="py-16 bg-gradient-to-r from-pink-500 to-purple-600 text-white">
+        <section id="contato" className="py-16 bg-gradient-to-r from-pink-500 to-purple-600 text-white" aria-labelledby="contato-heading">
           <div className="container">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Pronta para renovar seu guarda-roupa?</h2>
+              <h2 id="contato-heading" className="text-3xl md:text-4xl font-bold mb-6">Pronta para renovar seu guarda-roupa?</h2>
               <p className="text-lg mb-8 text-white/90">
                 Entre em contato conosco pelo Instagram ou WhatsApp e faça seu pedido agora mesmo!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="https://instagram.com/jeans_926" target="_blank" rel="noopener noreferrer">
+                <Link href={CONTACT_INFO.instagram} target="_blank" rel="noopener noreferrer">
                   <Button size="lg" className="bg-white text-pink-600 hover:bg-white/90 w-full sm:w-auto">
                     <Instagram className="mr-2 h-5 w-5" /> Pedir pelo Instagram
                   </Button>
@@ -422,13 +249,13 @@ export default function Home() {
                   height={80} 
                   className="w-14 h-14 md:w-16 md:h-16" 
                 />
-                <span className="text-lg font-bold">Jeans_926</span>
+                <span className="text-lg font-bold">{SITE_INFO.name}</span>
               </div>
               <p className="text-muted-foreground mb-4">
-                Loja de roupas femininas e masculinas, variedade para todos os estilos e tamanhos.
+                {SITE_INFO.description}
               </p>
               <div className="flex items-center gap-4">
-                <Link href="https://instagram.com/jeans_926" target="_blank" rel="noopener noreferrer">
+                <Link href={CONTACT_INFO.instagram} target="_blank" rel="noopener noreferrer">
                   <Button variant="ghost" size="icon" className="h-8 w-8">
                     <Instagram className="h-4 w-4 text-[#E4405F]" />
                     <span className="sr-only">Instagram</span>
@@ -457,15 +284,15 @@ export default function Home() {
             <div>
               <h3 className="font-medium mb-4">Informações</h3>
               <div className="space-y-2 text-muted-foreground">
-                <p>Horário de atendimento: Seg-Sex 9h às 18h</p>
+                <p>Horário de atendimento: {SITE_INFO.businessHours}</p>
                 <p>Entrega para toda a região</p>
                 <p>Pagamento via Pix, cartão e dinheiro</p>
-                <p ><a href="https://www.google.com/maps/@-3.7767944,-38.5830426,3a,75y,25.57h,90.23t/data=!3m7!1e1!3m5!1sqJXnH_RK7RLYPhgkk4JOog!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-0.22731996752557393%26panoid%3DqJXnH_RK7RLYPhgkk4JOog%26yaw%3D25.571031895606716!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI1MDMyNS4xIKXMDSoJLDEwMjExNjQwSAFQAw%3D%3D">Endereço: Seixas Correa, 926 - Bom Sucesso</a></p>
+                <p><a href={CONTACT_INFO.googleMapsUrl}>Endereço: {CONTACT_INFO.address}</a></p>
               </div>
             </div>
           </div>
           <div className="border-t mt-6 md:mt-8 pt-6 md:pt-8 text-center text-xs md:text-sm text-muted-foreground">
-            <p> 2024 Jeans_926. Todos os direitos reservados.</p>
+            <p> 2024 {SITE_INFO.name}. Todos os direitos reservados.</p>
           </div>
         </div>
       </footer>

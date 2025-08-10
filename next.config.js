@@ -4,13 +4,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // Adicione esta configuração se você estiver usando imagens remotas
-  // remotePatterns: [
-  //   {
-  //     protocol: 'https',
-  //     hostname: '**',
-  //   },
-  // ],
+  trailingSlash: true,
+  basePath: '',
+  assetPrefix: '',
 }
 
 module.exports = nextConfig

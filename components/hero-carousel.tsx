@@ -4,21 +4,7 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight } from "lucide-react"
-
-const images = [
-  {
-    src: "/hero-1.png",
-    alt: "Coleção Jeans Feminino"
-  },
-  {
-    src: "/hero-2.png",
-    alt: "Moda Casual Feminina"
-  },
-  {
-    src: "/hero-3.png",
-    alt: "Looks Modernos"
-  },
-]
+import { HERO_IMAGES } from "@/lib/constants"
 
 function CarouselImage({ src, alt }: { src: string; alt: string }) {
   return (
@@ -40,8 +26,8 @@ function CarouselImage({ src, alt }: { src: string; alt: string }) {
 export function HeroCarousel() {
   const [current, setCurrent] = useState(0)
 
-  const next = () => setCurrent((current + 1) % images.length)
-  const prev = () => setCurrent((current - 1 + images.length) % images.length)
+  const next = () => setCurrent((current + 1) % HERO_IMAGES.length)
+  const prev = () => setCurrent((current - 1 + HERO_IMAGES.length) % HERO_IMAGES.length)
 
   useEffect(() => {
     const interval = setInterval(next, 5000)
@@ -51,7 +37,7 @@ export function HeroCarousel() {
   return (
     <div className="relative w-full h-[300px] md:h-[400px] lg:h-[600px]">
       <div className="absolute inset-0">
-        <CarouselImage {...images[current]} />
+        <CarouselImage {...HERO_IMAGES[current]} />
       </div>
       <Button
         variant="ghost"

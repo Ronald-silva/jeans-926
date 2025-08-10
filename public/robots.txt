@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://jeans926.com.br/sitemap.xml
+
+# Disallow admin areas (se houver)
+# Disallow: /admin/
+# Disallow: /_next/
+
+# Allow important resources
+Allow: /api/
+Allow: /_next/static/
+Allow: /_next/image/
+
+# Crawl delay (opcional)
+Crawl-delay: 1
